@@ -9,10 +9,8 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-    origin: "https://amazing-cocada-4c8856.netlify.app",
-    methods: ["GET", "POST"],
-}));
+app.use(cors());
+app.options("*", cors());
 
 app.use(express.json());
 
