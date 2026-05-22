@@ -10,8 +10,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: "*"
+    origin: "https://amazing-cocada-4c8856.netlify.app",
+    methods: ["GET", "POST"],
 }));
+
 app.use(express.json());
 
 connectRedis();
