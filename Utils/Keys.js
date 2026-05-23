@@ -1,7 +1,5 @@
-﻿import { randomBytes } from "crypto";
+﻿import { nanoid } from 'nanoid'
 
-export const generateShortId = (length = 7) => {
-    return randomBytes(length)
-        .toString("base64url")
-        .slice(0, length);
-};
+export const generateShortId = (length) => {
+  return nanoid(length);
+}
