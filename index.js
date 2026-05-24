@@ -9,7 +9,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: "*"
+    origin: "https://fastidious-piroshki-eb959b.netlify.app",
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+    optionsSuccessStatus: 200
 }));
 
 app.use(express.json());
