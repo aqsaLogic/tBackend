@@ -6,6 +6,8 @@ import URLRoute from "./Routes/urls.js";
 
 dotenv.config();
 
+
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(cors());
@@ -16,6 +18,11 @@ ConnectMongodb();
 
 app.use("/", URLRoute);
 
-app.listen(process.env.PORT || 5050, () => {
-    console.log("I am working");
+// app.listen(process.env.PORT || 5050, () => {
+//     console.log("I am working");
+// });
+
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`I am working on ${PORT}`);
 });
